@@ -1,9 +1,25 @@
-# DBMS Notes
+# DBMS Notes - NPTEL
 
-Clean and structured notes for database management systems.
+Structured notes for the NPTEL Database Management Systems course.
 
-Includes:
-- Concepts
-- SQL
-- Normalization
-- Examples
+## Structure
+
+- Week-wise notes
+- Lecture-wise breakdown
+- Exam-oriented summaries
+- Interview-focused conceptual questions
+
+## Goals
+
+- Strong DBMS fundamentals
+- Semester exam preparation
+- Interview preparation
+- System design foundation
+
+## Progress
+
+- Week 1 Completed
+- Week 2 In Progress
+
+---
+
