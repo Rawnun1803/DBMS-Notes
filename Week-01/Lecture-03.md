@@ -1,82 +1,104 @@
-# Lecture-03.md
-
-```markdown
 # Lecture 3  
 ## Database Engine and Internals
 
-## Internal Architecture and the Database Engine
+---
+
+## Core Components of a DBMS
+
+A DBMS consists of three major components:
+
+### 1. Storage Manager
+Responsible for:
+- File organization
+- Indexing
+- Data storage
+- Disk management
 
 ---
 
-## Core Components
-
-### 1. Storage Manager
-Handles:
-- File organization
-- Indexing
-- Hashing
-
 ### 2. Query Processor
-- Parses SQL
-- Converts to relational algebra
-- Optimizes query
-- Executes plan
+
+Responsible for:
+- Parsing SQL queries
+- Translating them into relational algebra
+- Optimizing execution plans
+- Executing queries
+
+---
 
 ### 3. Transaction Manager
-Ensures:
-- Consistency
-- Recovery
-- Concurrency control
+
+Responsible for:
+- Maintaining database consistency
+- Handling concurrent access
+- Recovery from failures
 
 ---
 
 ## Query Processing Steps
 
 1. Query Input
-2. Parsing
-3. Translation to relational algebra
-4. Optimization
-5. Execution
-6. Result Output
+2. Parsing and Syntax Checking
+3. Translation to Relational Algebra
+4. Query Optimization
+5. Execution Plan Generation
+6. Evaluation
+7. Result Output
 
 ---
 
 ## Key Definitions
 
-- Storage Manager
-- Query Optimizer
-- Transaction
-- DBA
-- Naive User
+### Storage Manager
+Interface between stored data and queries.
+
+### Query Optimizer
+Chooses the most efficient execution plan.
+
+### Transaction
+A sequence of operations performing a single logical task.
+
+### Naive User
+User who interacts through predefined applications.
+
+### Database Administrator (DBA)
+Person responsible for database security, backups, and maintenance.
 
 ---
 
 ## Examples
 
-- Two users booking last train seat
-- Power failure during transaction
-- Query optimization rewriting SQL
+- Two users booking the last train seat  
+- Power failure during a fund transfer  
+- Query rewritten by optimizer for efficiency  
 
 ---
 
 ## Persistent vs Transient Data
 
-Programs → transient data  
-Databases → persistent data
+Transient data:
+- Temporary
+- Exists during program execution
+
+Persistent data:
+- Stored permanently
+- Survives system restarts
+
+Databases manage persistent data.
 
 ---
 
 ## Common Mistakes
 
-- Thinking DBAs manage daily data entry
-- Assuming queries run exactly as written
+- Thinking DBAs handle routine data entry  
+- Assuming SQL queries execute exactly as written  
 
 ---
 
 ## Exam Questions
 
-1. Three major DBMS components.
-2. Storage manager responsibilities.
-3. Steps in query processing.
-4. Define transaction.
-5. Types of database users.
+1. Explain the three major components of a DBMS.
+2. What are the responsibilities of the Storage Manager?
+3. Describe the query processing steps.
+4. Define a transaction.
+5. List different types of database users.

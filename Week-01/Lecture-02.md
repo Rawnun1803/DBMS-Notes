@@ -1,71 +1,72 @@
 # Lecture 2  
 ## DBMS Fundamentals and Data Abstraction
 
-## Levels of Abstraction, Data Models, and Database Languages
+---
+
+## Levels of Abstraction
+
+To manage complexity, databases are organized into three abstraction levels:
+
+### 1. View Level
+- What the user sees
+- Hides internal complexity
+- Provides security and customization
+
+### 2. Logical Level
+- Describes what data is stored
+- Defines relationships between data
+- Used by database designers
+
+### 3. Physical Level
+- Describes how data is stored on disk
+- Involves file structures and indexing
 
 ---
 
-## Core Concepts
+## Schema vs Instance
 
-### Levels of Abstraction
+### Schema
+The logical design or blueprint of the database.
 
-1. Physical Level  
-   Describes how data is stored.
+### Instance
+The actual data stored in the database at a particular time.
 
-2. Logical Level  
-   Describes what data is stored and relationships.
-
-3. View Level  
-   Shows only required data to users.
+Schema rarely changes.  
+Instance changes frequently.
 
 ---
 
-### Schema vs Instance
+## Physical Data Independence
 
-- **Schema**: Structure or design of database.
-- **Instance**: Actual data at a given time.
+The ability to modify physical storage without changing the logical schema or application programs.
 
-Schema is like a blueprint.  
-Instance is like the actual building.
-
----
-
-### Physical Data Independence
-
-Ability to change physical storage without affecting logical schema.
+Example:
+Changing indexing technique should not affect SQL queries.
 
 ---
 
-### Data Models
+## Data Models
 
-Tools to describe:
+A data model provides tools to describe:
+
 - Data
 - Relationships
 - Constraints
 
 ---
 
-### Database Languages
+## Database Languages
 
-- **DDL**: Defines schema (CREATE, ALTER)
-- **DML**: Manipulates data (SELECT, INSERT, UPDATE)
-- **SQL**: Most widely used query language
+### DDL (Data Definition Language)
+Used to define structure.
 
----
+Examples:
+- CREATE
+- ALTER
+- DROP
 
-## Key Definitions
+Example:
 
-- Physical Level
-- Logical Level
-- View Level
-- Metadata
-- SQL
-
----
-
-## Example
-
-```sql
 CREATE TABLE instructor (
   id INT,
   name VARCHAR(20),
@@ -74,44 +75,46 @@ CREATE TABLE instructor (
 
 ---
 
+### DML (Data Manipulation Language)
+Used to access and modify data.
+
+Examples:
+- SELECT
+- INSERT
+- UPDATE
+- DELETE
+
+---
+
 ## Integrity Constraint Example
 
 An account balance must not fall below a specified minimum value.
 
-This rule ensures data integrity by preventing invalid updates.
+This ensures correctness and consistency of data.
 
 ---
 
 ## Abstraction Diagram
 
-Database abstraction is organized into three levels:
-
-1. View Level  
-   What the end user or application sees.
-
-2. Logical Level  
-   What data is stored and the relationships between data.
-
-3. Physical Level  
-   How the data is actually stored on disk.
+View Level  
+↓  
+Logical Level  
+↓  
+Physical Level  
 
 ---
 
 ## Common Mistakes
 
-- Confusing Physical Data Independence with Logical Data Independence  
-  Physical data independence means changes in storage structure do not affect the logical schema.
-
-- Thinking SQL can solve every computational problem  
-  SQL is not computationally complete and often needs to be embedded within general-purpose programming languages.
+- Confusing physical and logical data independence  
+- Assuming SQL can solve every computational problem  
 
 ---
 
 ## Exam Questions
 
-1. Explain the three levels of data abstraction in a DBMS.
-2. Differentiate between a database schema and a database instance.
-3. What is Physical Data Independence and why is it important?
-4. What is the role of the DDL compiler in a DBMS?
+1. Explain the three levels of data abstraction.
+2. Differentiate between schema and instance.
+3. Define physical data independence.
+4. What is the role of a DDL compiler?
 5. Compare pure query languages with commercial query languages.
-
